@@ -85,6 +85,13 @@ header{position: absolute;width: 100%;left: 0;right: 0;z-index: 23;}
   .social_media ul li{display:inline-block;vertical-align:top;vertical-align: middle;margin: 0 10px;}
   .social_media ul li a{}
 		.social_media ul li i {color: #00fff2;font-size: 25px;}
+
+	.sticky {position: fixed;z-index: 999;background: #0e1219;}
+	.slide-down {animation: slide-down ease-in-out .6s .1s both;}
+	@keyframes slide-down {
+  0% { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 1; transform: translateY(0%); }
+	}
 /*end header*/
 
 /*nav*/
@@ -132,9 +139,9 @@ header{position: absolute;width: 100%;left: 0;right: 0;z-index: 23;}
 .menu_slide_right {display: none;}
 
 /*Responsive burger and color*/
-.menu_slide_right .hamburger-inner, .menu_slide_right .hamburger-inner:before, .menu_slide_right .hamburger-inner:after{background:#000;}
+.menu_slide_right .hamburger-inner, .menu_slide_right .hamburger-inner:before, .menu_slide_right .hamburger-inner:after{background:#fff;}
 .menu_slide_right .toggle_holder{position: absolute;top: 55%;right: 10px;transform: translateY(-50%);}
-.menu_slide_right small{text-transform:uppercase;color:#000;font-weight:bold;font-size:13px;display:block;}
+.menu_slide_right small{text-transform:uppercase;color:#fff;font-weight:bold;font-size:13px;display:block;}
 
 /*end nav*/
 

@@ -107,6 +107,16 @@ $(document).ready(function(){
 
 	});
 
+	window.addEventListener('scroll', function() {
+  if (window.scrollY >= 40) {
+		$("header").addClass('sticky');
+		$("header").addClass('slide-down');
+  } else {
+    $("header").removeClass('sticky','slide-down');
+		$("header").removeClass('slide-down');
+  }
+});
+
 	$('.rslides').responsiveSlides();
 	// $(".box_skitter_large").skitter();
 

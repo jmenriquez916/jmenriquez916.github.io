@@ -119,7 +119,7 @@ and (max-width : 800px) {
   #nav_area{padding:25px 15px;background:#0e1219;position:relative;}
   .nav_toggle_button{display:block;position:relative;}
 
-  nav.page_nav {width: 280px;position: fixed;top: 0;right: -280px;height: 100%;background: #999999;transition: all 0.7s ease;overflow-y: scroll;padding: 0 0 30px;opacity: 0;float: none; clear: both;z-index:250;}
+  nav.page_nav {width: 280px;position: fixed;top: 0;right: -280px;height: 100%;background: #0e1219;transition: all 0.7s ease;overflow-y: scroll;padding: 0 0 30px;opacity: 0;float: none; clear: both;z-index:250;}
 	nav.page_nav ul{margin: 0; padding: 15px 10px;}
 	nav.page_nav ul li{width: 100%; display: block; margin: 0 auto 5px;}
   nav.page_nav ul li a{line-height: 50px;}
@@ -167,6 +167,7 @@ and (max-width : 600px) {
   .mobi_ban{display: block;width:100%;margin-left:0;}
   .non_ban_img{width: 275%;margin-left: -82%;}
   .page_title{position: static;background: #000;font-size: 30px;padding:10px;}
+  .bnr_info h2 {font-size: 10vw;}
 
   /*Middle Area*/
   .middle_boxes section{display:block;width: 100%;margin:5px auto;}
@@ -175,6 +176,8 @@ and (max-width : 600px) {
 
   /*Bottom Area*/
   .btm1_boxes section{display:block;width: 100%;margin:5px auto;}
+  .btm1_box ul {-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
+  .btm2_box ul li {width: 100%;}
 
 
   /*Footer Area*/
