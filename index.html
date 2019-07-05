@@ -169,7 +169,12 @@
 							<div id="bottom3">
 								<div class="wrapper">
 									<div class="btm3_con">
-										<ul>
+										<ul class="timeline">
+											<li>
+												<div class="timeline_con">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+												</div>
+											</li>
 											<li>
 												<div class="timeline_con">
 													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -251,6 +256,31 @@
                   <script src="js/calcheight.min.js"></script>
                   <script src="js/responsiveslides.min.js"></script>
                   <script src="js/plugins.js"></script>
+
+									<script>
+									function isElementInViewport(el) {
+									var rect = el.getBoundingClientRect();
+									return (
+										rect.top >= 0 &&
+										rect.left >= 0 &&
+										rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+										rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+									);
+								}
+
+								var items = document.querySelectorAll(".timeline li");
+
+								function callbackFunc() {
+									for (var i = 0; i < items.length; i++) {
+										if (isElementInViewport(items[i])) {
+											items[i].classList.add("in-view");
+										}
+									}
+								}
+
+								window.addEventListener("load", callbackFunc);
+								window.addEventListener("scroll", callbackFunc);
+									</script>
 
               </body>
               </html>

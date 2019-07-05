@@ -106,6 +106,11 @@ and (max-width : 1000px) {
   	}
 }
 
+@media screen and (max-width: 900px) {
+	.btm3_con ul li div {width: 250px;}
+	.btm3_con li:nth-child(even) div {left: -289px; /* 250+45-6 */}
+}
+
 @media only screen
 and (max-width : 800px) {
 
@@ -178,6 +183,11 @@ and (max-width : 600px) {
   .btm1_boxes section{display:block;width: 100%;margin:5px auto;}
   .btm1_box ul {-webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
   .btm2_box ul li {width: 100%;}
+
+  .timeline li {margin-left: 20px;}
+  .timeline li div {width: calc(100vw - 91px);}
+  .timeline li:nth-child(even) div {left: 45px;}
+  .timeline li:nth-child(even) div:before {left: -15px;border-width: 8px 16px 8px 0;border-color: transparent #F45B69 transparent transparent;}
 
 
   /*Footer Area*/
