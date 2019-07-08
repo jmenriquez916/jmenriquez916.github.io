@@ -44,7 +44,7 @@ and (max-width : 1000px) {
   nav.page_nav ul{ margin:0; padding:0 5px;text-align:center;}
   nav.page_nav ul li{width: 32%; margin:5px 3px;}
   nav.page_nav ul li:after{display:none;}
-  nav.page_nav ul li a{border:1px solid #494949;border-radius:5px;line-height: 50px;height:auto;}
+  nav.page_nav ul li a{border:1px solid #fff;line-height: 50px;height:auto;}
 
   nav.page_nav ul li span{right:0;top:5px;}
 
@@ -187,7 +187,7 @@ and (max-width : 600px) {
   .timeline li {margin-left: 20px;}
   .timeline li div {width: calc(100vw - 91px);}
   .timeline li:nth-child(even) div {left: 45px;}
-  .timeline li:nth-child(even) div:before {left: -15px;border-width: 8px 16px 8px 0;border-color: transparent #F45B69 transparent transparent;}
+  .timeline li:nth-child(even) div:before {left: -15px;border-width: 8px 16px 8px 0;border-color: transparent #e8e8e8 transparent transparent;}
 
 
   /*Footer Area*/
