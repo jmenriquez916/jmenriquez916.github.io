@@ -107,24 +107,80 @@ $(document).ready(function(){
 
 	});
 
-	$(window).resize(function(){
-		if(window_width > 1010) {
-			window.addEventListener('scroll', function() {
-		  if (window.scrollY >= 40) {
-				$("header").addClass('sticky');
-				$("header").addClass('slide-down');
-		  } else {
-		    $("header").removeClass('sticky','slide-down');
-				$("header").removeClass('slide-down');
-		  }
+	$('a[href*=#]').bind('click', function(e) {
+					e.preventDefault(); // prevent hard jump, the default behavior
+
+					var target = $(this).attr("href"); // Set the target as variable
+
+					// perform animated scrolling by getting top-position of target-element and set it as scroll target
+					$('html, body').stop().animate({
+							scrollTop: $(target).offset().top
+					}, 600, function() {
+							location.hash = target; //attach the hash (#jumptarget) to the pageurl
+					});
+
+					return false;
+			});
+
+			$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+
+		// Show/hide menu on scroll
+		//if (scrollDistance >= 850) {
+		//		$('nav').fadeIn("fast");
+		//} else {
+		//		$('nav').fadeOut("fast");
+		//}
+
+		// Assign active class to nav links while scolling
+		$('.page-section').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+						$('.navigation a.active').removeClass('active');
+						$('.navigation a').eq(i).addClass('active');
+				}
 		});
+}).scroll();
+
+
+
+	function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+var items = document.querySelectorAll(".timeline li");
+
+function callbackFunc() {
+	for (var i = 0; i < items.length; i++) {
+		if (isElementInViewport(items[i])) {
+			items[i].classList.add("in-view");
 		}
-	});
+	}
+}
 
-
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
 
 	$('.rslides').responsiveSlides();
 	// $(".box_skitter_large").skitter();
+		window_width = $(this).width();
+
+			$(window).scroll(function() {
+		    var scroll = $(window).scrollTop();
+
+		    if (scroll >= 40 && window_width > 1000) {
+					$("header").addClass('sticky');
+					$("header").addClass('slide-down');
+		    } else {
+		        $("header").removeClass('sticky','slide-down');
+						$("header").removeClass('slide-down');
+		    }
+			});
 
 	$('.back_top').click(function () { // back to top
 		$("html, body").animate({
