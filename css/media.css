@@ -82,11 +82,12 @@ and (max-width : 1000px) {
 	 .btm1_con{min-height:0;padding:0;}
 	  .btm1_boxes section{}
 
-  #bottom2{height:auto;padding:25px 15px;}
+  #bottom2{height:auto;padding:25px 15px;background: #faf9ff;}
 	 .btm2_con{min-height:0;padding:0;}
 	  .btm2_left_con{}
 	   .btm2_right_con{}
 
+  .btm3_con::before {display: none;}
   /*Footer Area*/
   footer{}
     .footer_top{height:auto;padding:25px 15px;}
