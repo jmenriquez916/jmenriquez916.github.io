@@ -246,7 +246,7 @@ header{position: absolute;width: 100%;left: 0;right: 0;z-index: 23;}
 		.timeline li::after {content: "";position: absolute;left: 50%;top: 0;transform: translateX(-50%);width: 30px;height: 30px;border-radius: 50%;background: #fff;transition: background .5s ease-in-out;}
 		.timeline li div {position: relative;bottom: 0;width: 400px;background: #fff;visibility: hidden;opacity: 0;transition: all .5s ease-in-out; color: #000;-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);border-radius: 10px;}
 		.timeline li div h3 {background: #e8e8e8;text-align: center;border-top-right-radius: 10px;border-top-left-radius: 10px;padding: .5em 0;}
-		.timeline li div p {padding: 15px;font-family: 'Roboto',sans-serif;line-height: 24px;font-size: 16px;text-align: center;white-space: pre-line;}
+		.timeline li div p {padding: 15px;font-family: 'Roboto',sans-serif;line-height: 24px;font-size: 16px;text-align: center;white-space: pre-line;color:#666;}
 		.timeline li div::before {content: "";position: absolute;top: 7px;width: 0;height: 0;border-style: solid;}
 		.timeline li:nth-child(odd) div {left: 45px;transform: translate3d(200px,0,0);}
 		.timeline li:nth-child(odd) div:before {left: -15px;border-width: 8px 16px 8px 0;border-color: transparent #e8e8e8 transparent transparent;}
