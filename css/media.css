@@ -151,7 +151,8 @@ and (max-width : 800px) {
 
   /*Bottom Area*/
   .btm1_boxes section{width: 47%;margin:5px;}
-
+  .btm2_box2 ul {flex-flow: wrap;}
+  .btm2_box2 ul li {width: 100%; max-width: 500px;}
   /*Footer Area*/
 
   /* Other */
